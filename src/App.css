@@ -1,0 +1,45 @@
+body{
+  background-color: #f1f3f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.app-container{
+  background: #fff;
+  box-shadow: 0 1px 8px 0 rgba(0,0,0,.06);
+  padding: 20px;
+  width: 300px;
+  height: 500px;
+  border-radius: 3px;
+}
+
+.app-container h5{
+  text-align: center;
+  color: #A67E59;
+}
+header{
+  margin-bottom: 25px;
+}
+
+form input{
+    border: 1px solid #eee;
+    padding: 10px 20px;
+    border-radius: 3px;
+    margin-right: 10px;
+    box-shadow: 1px 1px 3px #ddd;
+}
+
+form button{
+  background: #7D3AA1;
+  border: none;
+  padding: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #fff;
+}
+
+form input:focus, form button:focus{
+  outline: none;
+}
