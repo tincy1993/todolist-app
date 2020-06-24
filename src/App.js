@@ -16,13 +16,10 @@ class App extends Component {
          key:''
        }
     }
-    this.addItem = this.addItem.bind(this);
-    this.handleInput = this.handleInput.bind(this);
-    this.deleteItem = this.deleteItem.bind(this);
-    this.setUpdate = this.setUpdate.bind(this);
   }
-  handleInput(e){
+  handleInput= (e) => {
     this.setState ({
+      ...this.state,
       currentItem: {
         text: e.target.value,
         key: Date.now()
@@ -30,12 +27,13 @@ class App extends Component {
     })
   }
 
-  addItem(e){
+  addItem = (e)=> {
     e.preventDefault();
     const newItem = this.state.currentItem;
     if(newItem.text !== 0){
       const newItems = [...this.state.items, newItem]
       this.setState ({
+        ...this.state,
         items: newItems,
         currentItem: {
           text:'',
@@ -45,15 +43,16 @@ class App extends Component {
     }
   }
 
-  deleteItem(key){
+  deleteItem = (key) =>{
     const filteredItems = this.state.items.filter(item => item.key!=key);
     this.setState ({
+      ...this.state,
       items: filteredItems
 
     })
   }
 
-  setUpdate(text, key){
+  setUpdate = (text, key) => {
     const items = this.state.items;
     items.map(item =>{
       if(item.key===key){
@@ -61,6 +60,7 @@ class App extends Component {
       }
     })
     this.setState ({
+      ...this.state,
       items: items
     })
   }
@@ -73,7 +73,7 @@ class App extends Component {
         <form id="todo-form" onSubmit={this.addItem}>
           <input type="text" placeholder="Enter Text" 
           value={this.state.currentItem.text}
-          onChange={this.handleInput} />
+          onChange={e => this.handleInput(e)} />
           <button type="submit">Add item</button>
         </form>
       </header>
