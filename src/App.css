@@ -23,7 +23,7 @@ header{
   margin-bottom: 25px;
 }
 
-form input{
+input{
     border: 1px solid #eee;
     padding: 10px 20px;
     border-radius: 3px;
@@ -31,7 +31,7 @@ form input{
     box-shadow: 1px 1px 3px #ddd;
 }
 
-form button{
+button{
   background: #7D3AA1;
   border: none;
   padding: 10px;
@@ -40,6 +40,10 @@ form button{
   color: #fff;
 }
 
-form input:focus, form button:focus{
+button:hover {
+  background-color: #9E67B8;
+}
+
+input:focus, button:focus{
   outline: none;
 }

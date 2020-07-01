@@ -1,29 +1,26 @@
+.list-items-container{
+    list-style-type: none;
+    padding-left: 0;
+}
 .list{
     background: #F6EDE6;
     padding: 10px;
     margin: 10px 0;
     border-radius: 3px;
-}
-
-.list p {
-    margin: 0;
     position: relative;
 }
-
-.list p input{
-    background: transparent;
-    border:none;
-    color:#888;
-}
-
-.list p input:focus{
-    outline: none;
-}
-
-.list p span{
-    position: absolute;
-    right: 0px;
-    color: #f00;
+.list span{
     font-size: 14px;
     cursor: pointer;
+}
+
+.list .edit-icon{
+    position: absolute;
+    right: 25px;
+}
+
+.list .delete-icon{
+    position: absolute;
+    right: 10px;
+    color: #f00;
 }
